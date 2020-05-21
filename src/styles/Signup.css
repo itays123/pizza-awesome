@@ -1,0 +1,77 @@
+.signup {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: stretch;
+    text-align: center;
+}
+
+.signup .page h1 {
+    text-align: center;
+}
+
+.cretentials.card {
+    padding: 12px;
+    margin-bottom: 24px;
+}
+
+.cretentials.card form {
+    margin: 0;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+.cretentials.card form input {
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 25rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.label.card {
+    padding: 8px 12px;
+    color: #c73838;
+    font-weight: 700;
+}
+
+.label.card * {
+    margin: 0 16px;
+    text-align: center;
+}
+
+.signup .page button {
+    margin: 0 auto;
+}
+
+@media (max-width: 1024px) {
+    .signup {
+        flex-direction: column;
+    }
+    .signup .decoration {
+        display: none;
+    }
+    .signup .page h1 {
+        font-size: 1.3rem;
+    }
+}
+
+@media (min-width: 1024px) {
+    .signup {
+        height: calc(100vh - 3.5rem);
+    }
+    .signup .page {
+        width: 60%;
+    }
+    .signup .decoration {
+        display: flex;
+        height: 100%;
+        width: 40%;
+        align-items: center;
+        justify-content: center;
+    }
+    .signup .page > button {
+        margin-top: 24px;
+    }
+}

@@ -1,0 +1,74 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: #ffffff;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: #444;
+}
+
+.container {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.btn {
+  outline: none;
+  border: none;
+  margin: 8px;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 1rem;
+  background-color: #c73838;
+  color: white;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: #e75858;
+}
+
+.card {
+  background: #ededed;
+  width: calc(100% - 40px);
+  max-width: 760px;
+  margin: 6px auto;
+  border-radius: 8px;
+}
+
+.profilePic {
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.profilePic.big { width: 200px; height: 200px; }
+.profilePic.big img { width: 150px; }
+
+.profilePic.small { width: 40px; height: 40px; }
+.profilePic.small img { width: 30px; }
+
+@media (max-width: 1024px) {
+  .profilePic.big { width: 67px; height: 67px; }
+  .profilePic.big img { width: 50px; height: 50px; }
+}
+
+@media (min-width: 1024px) {
+  .scrollable {
+    box-sizing: border-box;
+    overflow-y: scroll;
+    padding-bottom: 2px;
+    padding-right: 6px;
+  }
+}

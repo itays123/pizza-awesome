@@ -37,32 +37,42 @@ Instead, it will copy all the configuration files and the transitive dependencie
 
 You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
-## Learn More
+## npm run server
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+my command, runs app.js with nodemon so you can develop the API.
+make sure to install `nodemon` before startup.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## npm run dev
 
-### Code Splitting
+runs **`npm run server`** and **`npm start`** (to start the react development server and the backend)
+Note: this script won't work without adding **"proxy": "http://localhost:3001"** (or other port that you use for your backend) in the **package.json** file. 
+make sure to install `npm-run-all` before startup.
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+## routes, backend endpoints etc.. 
 
-### Analyzing the Bundle Size
+this project has many routes to use:
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
+## frontend routes:
 
-### Making a Progressive Web App
+**/** - the main route, offers actions to do in response to your auth state.
+**/newpizza** - the route that offers an interactive way to order your pizza. `route guarded!`
+**/profile** - the route that shows you data about your account such as last pizzas ordered. `route guarded!`
+**/signup** - the sign up form. `route guarded for authenticated users`
+note that the login form is in a modal activated from the navbar.
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
+## backend endpoints: 
 
-### Advanced Configuration
+**`POST` /auth/signup** - sign up with `{ email, password, address: { city, street, number, apartment } }`
+**`POST` /auth/login** - log in with `{ email, password }`
+**`PUT` /auth** update user data with `{ query, data }` and the Auth header
+**`POST` /api** create a new pizza with `{ title, topics, flags }` and the Auth header
+**`GET` /api/admin** get all orders with the Auth header (with the admin email, as defined in .env )
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
+## .env variables 
 
-### Deployment
+make sure to add these variables to your envioerment:
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+**MongoDB cluster url** as `DB_LINK`
+**Admin data** as `ADMIN`. this is an object that contains three values: 
+ - the longitude (`lng`) and latitude (`lat`) of your pizza place,
+ - and the admin `email`.

@@ -1,0 +1,31 @@
+.pizza-list {
+    margin-top: 12px;
+    overflow: auto;
+}
+
+.pizza-list .pizza-details {
+    display: inline-block;
+    margin-right: 20px;
+    margin-bottom: 10px;
+}
+
+.pizza-details h4, .pizza-details h5 {
+    text-align: center;
+    margin-top: 4px;
+    margin-bottom: 0;
+}
+
+.last-pizzas.card {
+    padding: 8px 12px;
+}
+
+.last-pizzas.card h4 {
+    margin: 0;
+}
+
+@media (min-width: 1024px) {
+    .last-pizzas.card h4 {
+        font-size: 1.2rem;
+    }
+}
+

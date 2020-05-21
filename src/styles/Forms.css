@@ -1,0 +1,18 @@
+form {
+    margin: 20px auto;
+}
+
+form input {
+    box-sizing: border-box;
+    display: block;
+    width: 100%;
+    outline: none;
+    margin-bottom: 8px;
+    padding: 0.65rem 16px;
+    border: 1px solid #aaa;
+    border-radius: 4px;
+}
+
+form input:focus {
+    border-color: #444;
+}

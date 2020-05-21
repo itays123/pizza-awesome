@@ -1,0 +1,92 @@
+.topic-form.card {
+    box-sizing: border-box;
+    padding: 6px 12px;
+    width: 100%;
+    margin-bottom: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.topic-form.card * {
+    margin: 0;
+    margin-right: 6px;
+}
+
+.topic-display {
+    background-color: white;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+}
+
+.topic-display.olive { background-image: url('../assets/olives.png'); }
+.topic-display.onion { background-image: url('../assets/onions.png'); }
+.topic-display.pineapple { background-image: url('../assets/pineapple.png'); }
+.topic-display.salami { background-image: url('../assets/salami.png'); }
+.topic-display.tomato { background-image: url('../assets/tomato.png'); }
+.topic-display.mushroom { background-image: url('../assets/mushroom.png'); }
+.topic-display.corn { background-image: url('../assets/corn.png'); }
+
+.topic-form button {
+    box-sizing: border-box;
+    background-image: url('../assets/done.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+}
+
+.topic-form button:disabled {
+    background-color: #aaa;
+    cursor: auto;
+}
+
+.topic-form button:last-child {
+    background-image: url('../assets/delete.svg');
+    background-color: #bbb;
+}
+
+.topic-form select, .topic-form input {
+    border: none;
+    outline: none;
+    box-sizing: border-box;
+    height: 30px;
+    border-radius: 15px;
+    padding-left: 6px;
+    padding-right: 6px;
+    font-size: 16px;
+}
+
+.topic-form div {
+    display: flex;
+}
+
+.err {
+    color: red;
+    margin-left: 12px;
+}
+
+@media (min-width: 1024px) {
+    .topic-form.card { 
+        max-width: unset; 
+        margin-right: 12px;
+    }
+}
+
+@media (max-width: 760px) {
+    .topic-form select, .topic-form input {
+        font-size: 12px;
+    }
+    .topic-form select {
+        max-width: 84px;
+    }
+    
+    .topic-form input {
+        max-width: 96px;
+    }
+}

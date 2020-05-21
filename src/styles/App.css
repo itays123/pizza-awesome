@@ -1,0 +1,209 @@
+.navbar {
+  width: 100%;
+  background-color: #c73838;
+  height: 3.5rem;
+}
+
+.navbar .nav-wrapper {
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navbar .nav-wrapper * {
+  margin: 0;
+  list-style-type: none;
+  color: white;
+}
+
+.navbar .links {
+  height: 100%;
+  list-style-type: none;
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+}
+
+.navbar .links li {
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0 10px;
+}
+
+.navbar a, .navbar button {
+  outline: none;
+  border: none;
+  text-decoration: none;
+  font-size: 14px;
+  background-color: transparent;
+  cursor: pointer;
+  font: inherit;
+  border-radius: 6px;
+  padding-bottom: 2px;
+}
+
+.navbar .links .active {
+  background: white;
+  color: #c73838;
+}
+
+.navbar .links .do-not-active a {
+  background: transparent;
+}
+
+.navbar h1 {
+  font-size: 1.5rem;
+}
+
+@media (max-width: 760px) {
+  .navbar h1 {
+    font-size: 1.1rem;
+  }
+  .navbar a, .navbar button {
+    font-size: 0.8rem;
+  }
+  .navbar li {
+    padding: 0;
+  }
+}
+
+.loading-container {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.lds-roller {
+  display: inline-block;
+  position: relative;
+  width: 100px;
+  height: 100px;
+}
+.lds-roller div {
+  animation: lds-roller 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+  transform-origin: 50px 50px;
+}
+.lds-roller div:after {
+  content: " ";
+  display: block;
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  margin: -4px 0 0 -4px;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.lds-roller div:nth-child(1) {
+  animation-delay: -0.036s;
+}
+.lds-roller div:nth-child(1):after {
+  background-image: url('../assets/olives.png'); 
+  top: 79px;
+  left: 79px;
+}
+.lds-roller div:nth-child(2) {
+  animation-delay: -0.072s;
+}
+.lds-roller div:nth-child(2):after {
+  background-image: url('../assets/onions.png'); 
+  top: 85px;
+  left: 70px;
+}
+.lds-roller div:nth-child(3) {
+  animation-delay: -0.108s;
+}
+.lds-roller div:nth-child(3):after {
+  background-image: url('../assets/pineapple.png'); 
+  top: 89px;
+  left: 60px;
+}
+.lds-roller div:nth-child(4) {
+  animation-delay: -0.144s;
+}
+.lds-roller div:nth-child(4):after {
+  background-image: url('../assets/salami.png'); 
+  top: 90px;
+  left: 50px;
+}
+.lds-roller div:nth-child(5) {
+  animation-delay: -0.18s;
+}
+.lds-roller div:nth-child(5):after {
+  background-image: url('../assets/tomato.png'); 
+  top: 89px;
+  left: 40px;
+}
+.lds-roller div:nth-child(6) {
+  animation-delay: -0.216s;
+}
+.lds-roller div:nth-child(6):after {
+  background-image: url('../assets/mushroom.png'); 
+  top: 85px;
+  left: 30px;
+}
+.lds-roller div:nth-child(7) {
+  animation-delay: -0.252s;
+}
+.lds-roller div:nth-child(7):after {
+  background-image: url('../assets/corn.png'); 
+  top: 79px;
+  left: 21px;
+}
+@keyframes lds-roller {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+
+.notificaiton {
+  background-color: #fff;
+  width: 100%;
+  height: 3.5rem;
+  position: fixed;
+  top: 0;
+  opacity: 1;
+  animation: slide-down 0.5s ease-in;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 0 5%;
+}
+
+@keyframes slide-down {
+  from {
+    opacity: 0;
+    top: -3.5rem;
+  }
+  to {
+    opacity: 1;
+    top: 0;
+  }
+}
+
+.notificaiton * {
+  margin: 0;
+}
+
+.notificaiton .status {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+
+
+ 
+

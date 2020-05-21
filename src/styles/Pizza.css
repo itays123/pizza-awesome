@@ -1,0 +1,152 @@
+.pizza-container {
+    height: 160px;
+    width: 160px;
+    border-radius: 50%;
+    border: 8px solid #ffb10b;
+    overflow: hidden;
+}
+
+.pizza-background {
+    background-color: #ffc41b;
+    position: absolute;
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+}
+
+.pizza-background div {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 79px;
+    height: 100%;
+    width: 2px;
+    background: #ffd06c;
+}
+
+.pizza-background div:nth-child(2) { transform: rotate(45deg); }
+.pizza-background div:nth-child(3) { transform: rotate(90deg); }
+.pizza-background div:nth-child(4) { transform: rotate(135deg); }
+
+.slice-container {
+    position: absolute;
+    width: 160px;
+    height: 160px;
+    border-radius: 80px;
+    clip: rect(0px, 160px, 160px, 80px);
+}
+
+.slice-2 { transform: rotate(45deg); }
+.slice-3 { transform: rotate(90deg); }
+.slice-4 { transform: rotate(135deg); }
+.slice-5 { transform: rotate(180deg); }
+.slice-6 { transform: rotate(225deg); }
+.slice-7 { transform: rotate(270deg); }
+.slice-8 { transform: rotate(315deg); }
+
+.slice {
+    position: absolute;
+    width: 160px;
+    height: 160px;
+    border-radius: 80px;
+    clip: rect(0px, 80px, 160px, 0px);
+    transform: rotate(45deg);
+}
+
+
+.topic {
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute; 
+    margin: 10px auto auto;
+    top: 0; left: 0; bottom: 0; right: 20px;
+}
+.topic:nth-child(1) { right: 60px; }
+.topic:nth-child(2) { right: 35px; margin-top: 20px; }
+.topic:nth-child(3) { right: 20px; margin-top: 50px; }
+.topic:nth-child(4) { margin-top: 32px; }
+.topic:nth-child(5) { right: 26px; margin-top: 3px; }
+.topic:nth-child(6) { right: 64px; margin-top: 30px; }
+.topic:nth-child(7) { right: 46px; margin-top: 40px; }
+
+
+.topic.olive { 
+    background-image: url('../assets/olives.png'); 
+    height: 14px;
+    width: 14px;
+}
+
+
+.topic.onion { 
+    background-image: url('../assets/onions.png'); 
+    width: 20px;
+    height: 20px;
+}
+.topic.onion:nth-child(2),
+.topic.onion:nth-child(3),
+.topic.onion:nth-child(4),
+.topic.onion:nth-child(6) { width: 16px; height: 16px; }
+.topic.onion:nth-child(4) { margin-top: 36px; }
+.topic.onion:nth-child(6) { margin-top: 28px; }
+.topic.onion:nth-child(7) { width: 14px; height: 14px; }
+
+
+.topic.pineapple { 
+    background-image: url('../assets/pineapple.png'); 
+    width: 18px;
+    height: 18px;
+}
+.topic.pineapple:nth-child(2) { transform: rotate(-45deg); }
+.topic.pineapple:nth-child(3) { transform: rotate(180deg); }
+.topic.pineapple:nth-child(5) { transform: rotate(-70deg); }
+.topic.pineapple:nth-child(6) { transform: rotate(150deg); margin-top: 28px; }
+.topic.pineapple:nth-child(7) { transform: rotate(165deg); }
+
+
+.topic.salami { 
+    background-image: url('../assets/salami.png'); 
+    width: 24px;
+    height: 24px;
+}
+.topic.salami:nth-child(1) { margin-top: 5px; }
+.topic.salami:nth-child(2), 
+.topic.salami:nth-child(4),
+.topic.salami:nth-child(7) { width: 20px; height: 20px; }
+.topic.salami:nth-child(3),
+.topic.salami:nth-child(6) { width: 16px; height: 16px; }
+.topic.salami:nth-child(7) { right: 36px; margin-top: 36px; }
+
+
+.topic.tomato { 
+    background-image: url('../assets/tomato.png'); 
+    width: 24px;
+    height: 24px;
+}
+.topic.tomato:nth-child(1) { margin-top: 3px; }
+.topic.tomato:nth-child(2) { margin-top: 16px; width: 20px; height: 20px; }
+.topic.tomato:nth-child(3),
+.topic.tomato:nth-child(7) { width: 16px; height: 16px; }
+.topic.tomato:nth-child(4) { margin-top: 38px; width: 14px; height: 14px; }
+.topic.tomato:nth-child(5) { margin-top: 0px; }
+.topic.tomato:nth-child(6) { width: 12px; height: 12px; }
+.topic.tomato:nth-child(7) { right: 50px; margin-top: 36px; }
+
+
+.topic.mushroom {
+     background-image: url('../assets/mushroom.png'); 
+     width: 14px;
+     height: 14px;
+}
+.topic.mushroom:nth-child(4) { right: 15px; }
+
+
+.topic.corn {
+     background-image: url('../assets/corn.png'); 
+     width: 14px;
+     height: 14px;
+}
+
+
+/*
+#fe4e4f #ffd72c #ffb10b
+*/
