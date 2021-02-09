@@ -1,4 +1,4 @@
-const { Pizzas } = require('../../models');
+const { Pizzas } = require('../models');
 
 module.exports = async (req, res) => {
     if (!req.isAuth || !req.isAdmin) {

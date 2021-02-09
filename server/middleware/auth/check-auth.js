@@ -1,4 +1,4 @@
-const decode = require('./logic/get-token');
+const decode = require('./get-token');
 
 module.exports = (req, res, next) => {
     try {

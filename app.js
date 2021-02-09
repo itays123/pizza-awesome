@@ -4,10 +4,10 @@ const { connect } = require('mongoose');
 const path = require('path')
 
 app.use(require('body-parser').json());
-app.use(require('./api/cors'));
-app.use(require('./auth/check-auth'));
-app.use('/api', require('./api/routes'));
-app.use('/auth', require('./auth/routes'));
+app.use(require('./server/middleware/cors'));
+app.use(require('./server/middleware/auth/check-auth'));
+app.use('/api', require('./server/api/routes'));
+app.use('/auth', require('./server/auth/routes'));
 app.use(express.static('build'));
 
 app.use(function (req, res) {

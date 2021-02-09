@@ -1,7 +1,7 @@
-const { Users } = require('../../models');
+const { Users } = require('../models');
 const { compareSync } = require('bcrypt-nodejs');
 const { sign } = require('jsonwebtoken');
-const getPizzasByUser = require('./get-pizzas-by-user');
+const getPizzasByUser = require('./helpers/get-pizzas-by-user');
 
 module.exports = async (req, res) => {
     try {

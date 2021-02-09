@@ -1,8 +1,8 @@
 const express = require('express');
 const router = express.Router();
-const signin = require('./logic/sign-in');
-const signup = require('./logic/sign-up');
-const updateUser = require('./logic/update-user');
+const signin = require('./sign-in');
+const signup = require('./sign-up');
+const updateUser = require('./update-user');
 
 router.post('/signin', signin);
 router.post('/signup', signup);

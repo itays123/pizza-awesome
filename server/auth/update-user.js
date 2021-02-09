@@ -1,5 +1,5 @@
-const updateAddress = require('./update-address');
-const updatePassword = require('./update-password');
+const updateAddress = require('./helpers/update-address');
+const updatePassword = require('./helpers/update-password');
 
 module.exports =  async (req, res) =>  {
     try {

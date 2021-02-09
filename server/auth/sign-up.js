@@ -1,7 +1,7 @@
-const { Users } = require('../../models');
-const checkIfUserExists = require('./check-user-exists');
-const encryptPassword = require('./encrypt-password');
-const getGeoLocation = require('./get-geo-location');
+const { Users } = require('../models');
+const checkIfUserExists = require('./helpers/check-user-exists');
+const encryptPassword = require('./helpers/encrypt-password');
+const getGeoLocation = require('./helpers/get-geo-location');
 
 module.exports = async (req, res) => {
     try {
