@@ -27,6 +27,7 @@ const AuthContextProvider = ({ children }) => {
         fetchLogin(email, password)
             .then(res => res.json())
             .then(result => {
+                setLoading(false);
                 const { user, token, err } = result;
                 if (err) {
                     notify(err);
@@ -36,7 +37,6 @@ const AuthContextProvider = ({ children }) => {
                 setUser(user);
                 setToken(token);
                 saveToLocalStroage(true, user, token);
-                setLoading(false);
                 notify('logged in as ' + user.email, '#1af07e')
             })
             .catch(err => {
