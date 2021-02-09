@@ -1,7 +1,7 @@
 import React, { createContext, useState, useContext } from 'react';
-import LoginForm from './LoginForm';
+import LoginForm from './Login/LoginForm';
 import { fetchLogin, fetchSignup, fetchUpdate } from './fetch';
-import { AppContext } from '../app/AppContext';
+import { AppContext } from '../layout/AppContext';
 
 export const AuthContext = createContext();
 

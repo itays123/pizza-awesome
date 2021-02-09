@@ -1,0 +1,19 @@
+
+.profilePic {
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .profilePic.big { width: 200px; height: 200px; }
+  .profilePic.big img { width: 150px; }
+  
+  .profilePic.small { width: 40px; height: 40px; }
+  .profilePic.small img { width: 30px; }
+  
+  @media (max-width: 1024px) {
+    .profilePic.big { width: 67px; height: 67px; }
+    .profilePic.big img { width: 50px; height: 50px; }
+  }
+  

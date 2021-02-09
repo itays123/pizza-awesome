@@ -1,0 +1,48 @@
+header .card, main .card {
+    padding: 12px;
+}
+
+header .card *, main .card * { margin: 0; }
+
+header .card h1 {
+    margin: 8px 0;
+}
+
+main .card h2 {
+    margin: 4px 0 8px;
+}
+
+main .home-actions {
+    width: calc(100% - 40px);
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 0 12px;
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+main .home-actions button {
+    margin-right: 0;
+    margin-top: 0;
+    height: min-content;
+    max-height: 30px;
+}
+
+.topic-hr {
+    width: min-content;
+    margin: 0 auto;
+    display: flex;
+}
+
+.topic-hr .topic-display {
+    width: 16px;
+    height: 16px;
+}
+
+.topic-hr .topic-display.olive { background-image: url('../../assets/olives.png'); }
+.topic-hr .topic-display.onion { background-image: url('../../assets/onions.png'); }
+.topic-hr .topic-display.pineapple { background-image: url('../../assets/pineapple.png'); }
+.topic-hr .topic-display.salami { background-image: url('../../assets/salami.png'); }
+.topic-hr .topic-display.tomato { background-image: url('../../assets/tomato.png'); }
+.topic-hr .topic-display.mushroom { background-image: url('../../assets/mushroom.png'); }
+.topic-hr .topic-display.corn { background-image: url('../../assets/corn.png'); }

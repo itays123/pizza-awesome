@@ -1,14 +1,13 @@
 import React from 'react';
-import './styles/App.css';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
-import AuthContextProvider from './auth/authContext';
-import Navbar from './layout/Navbar';
-import Signup from './auth/Signup';
-import Profile from './auth/Profile';
-import AppContextProvider from './app/AppContext';
-import PizzaContextProvider from './app/PizzaContext';
-import OrderPizza from './app/OrderPizza';
-import Home from './app/Home';
+import AuthContextProvider from './auth/AuthContext';
+import Navbar from './layout/Navbar/Navbar';
+import Signup from './auth/Signup/Signup';
+import Profile from './auth/Profile/Profile';
+import AppContextProvider from './layout/AppContext';
+import PizzaContextProvider from './pizza/Order/PizzaContext';
+import OrderPizza from './pizza/Order/Order';
+import Home from './layout/HomePage/Home';
 
 function App() {
   return (

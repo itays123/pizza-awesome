@@ -1,0 +1,7 @@
+.card {
+    background: #ededed;
+    width: calc(100% - 40px);
+    max-width: 760px;
+    margin: 6px auto;
+    border-radius: 8px;
+}
