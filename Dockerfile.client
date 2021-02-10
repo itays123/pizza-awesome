@@ -1,0 +1,16 @@
+FROM node:12.20.1-alpine3.12
+
+WORKDIR /usr/app
+
+COPY package*.json ./
+
+###  Installing dependencies
+
+RUN npm install --silent
+
+# copy local files to app folder
+COPY . .
+
+EXPOSE 3000
+
+CMD [ "npm", "start" ]

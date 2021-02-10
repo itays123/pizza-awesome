@@ -1,0 +1,48 @@
+version: '3.7'
+
+services:
+  server:
+    build:
+      context: .
+      dockerfile: Dockerfile.server
+    image: pizza-server
+    container_name: pizza-node-server
+    volumes:
+      - .:/usr/src/app
+      - /usr/src/app/node_modules
+    ports:
+      - "3001:3001"
+      - "27017:27017"
+    env_file: 
+      - .env
+    networks:
+      - app-network
+  client:
+    build:
+      context: .
+      dockerfile: Dockerfile.client
+    image: pizza-client
+    container_name: pizza-react-client
+    command: npm start
+    volumes:
+      - .:/usr/app
+      - /usr/app/node_modules
+    depends_on:
+      - server
+    ports:
+      - "3000:3000"
+    networks:
+      - app-network
+    environment: 
+      - CHOKIDAR_USEPOLLING=true
+    stdin_open: true
+
+networks:
+    app-network:
+        driver: bridge
+
+volumes:
+    data-volume:
+    node_modules:
+    web-root:
+      driver: local
