@@ -2,6 +2,7 @@ const express = require('express');
 const app = express();
 const { connect } = require('mongoose');
 const routes = require('./server/routes');
+require('./config')
 
 app.use(routes);
 

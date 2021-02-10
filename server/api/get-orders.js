@@ -1,4 +1,5 @@
 const { Pizzas } = require('../models');
+const getAdminCoordinates = require('./helpers/getAdminCoordinates');
 
 module.exports = async (req, res) => {
     if (!req.isAuth || !req.isAdmin) {
@@ -6,7 +7,7 @@ module.exports = async (req, res) => {
         return;
     }
     try {
-        const { lng, lat } = process.env.ADMIN;
+        const { lng, lat } = getAdminCoordinates();
         const orders = await Pizzas.aggregate([
             {
                $geoNear: {
