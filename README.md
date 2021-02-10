@@ -1,8 +1,12 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app) and programmed with passion by me.
+
+# Pizza Awesome
+
+This project is an online pizza shop, with a custom pizza-creation user interface. This project was created using the MERN stack - MongoDB, Express.js, React.js and Node.js
 
 ## Available Scripts
 
-In the project directory, you can run:
+In the project directory, you can run the built-in react script and a few pf my own:
 
 ### `npm start`
 
@@ -37,22 +41,22 @@ Instead, it will copy all the configuration files and the transitive dependencie
 
 You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
-## npm run server
+### `npm run server`
 
 my command, runs app.js with nodemon so you can develop the API.
 make sure to install `nodemon` before startup.
 
-## npm run dev
+### `npm run dev`
 
 runs **`npm run server`** and **`npm start`** (to start the react development server and the backend)
 Note: this script won't work without adding **"proxy": "http://localhost:3001"** (or other port that you use for your backend) in the **package.json** file. 
 make sure to install `npm-run-all` before startup.
 
-## routes, backend endpoints etc.. 
+## Routes and Endpoints
 
 this project has many routes to use:
 
-## frontend routes:
+### frontend routes:
 
 **/** - the main route, offers actions to do in response to your auth state.
 **/newpizza** - the route that offers an interactive way to order your pizza. `route guarded!`
@@ -60,7 +64,7 @@ this project has many routes to use:
 **/signup** - the sign up form. `route guarded for authenticated users`
 note that the login form is in a modal activated from the navbar.
 
-## backend endpoints: 
+### backend endpoints: 
 
 **`POST` /auth/signup** - sign up with `{ email, password, address: { city, street, number, apartment } }`
 **`POST` /auth/login** - log in with `{ email, password }`
@@ -68,11 +72,17 @@ note that the login form is in a modal activated from the navbar.
 **`POST` /api** create a new pizza with `{ title, topics, flags }` and the Auth header
 **`GET` /api/admin** get all orders with the Auth header (with the admin email, as defined in .env )
 
-## .env variables 
+## Devops
 
-make sure to add these variables to your envioerment:
+As of February 2021, this project fully supports Docker. 
+
+### Environment Variables
+
+make sure to add these variables to your environment:
 
 **MongoDB cluster url** as `DB_LINK`
-**Admin data** as `ADMIN`. this is an object that contains three values: 
- - the longitude (`lng`) and latitude (`lat`) of your pizza place,
- - and the admin `email`.
+**Admin data** as `ADMIN_EMAIL`, `ADMIN_LNG` and `ADMIN_LAT`.
+
+### MongoDB
+
+I chose to use MongoDB Atlas for my project. If you wish to use the dockerized version of MongoDB, add the mongo service to the compose file and change the database url.
